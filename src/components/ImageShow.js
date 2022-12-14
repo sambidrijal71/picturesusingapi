@@ -1,9 +1,8 @@
 import React from "react";
-import ImageList from './ImageList'
-function ImageShow() {
+function ImageShow({ image }) {
     return (
-        <div>This is ImageShow
-            <ImageList />
+        <div>
+            <img src={image.urls.small} alt={image.ale_description} />
         </div>
     )
 }

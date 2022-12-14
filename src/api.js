@@ -1,16 +1,15 @@
-
 import axios from "axios";
 
-const imageSearch = async () => {
+const searchImages = async (term) => {
     const response = await axios.get('https://api.unsplash.com/search/photos', {
         headers: {
             Authorization: 'Client-ID zVP3ADMd8nH-ef3STq7hFQko974YhCnGlD7EB17qp_g'
         },
         params: {
-            query: 'cars'
+            query: term
         }
     })
-    console.log(response);
-    return response
+    return response.data.results;
 }
-export default imageSearch
+
+export default searchImages
